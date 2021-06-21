@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+        <link rel="stylesheet" href="test-modal-dialog.css" />
+    </head>
+    <body>
+
+        <button type="button" class="btn btn-primary" style="margin-top:5px;" data-bs-toggle="modal" data-bs-target="#exampleModal">윤정도 플러그인</button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-hilite-tab" data-bs-toggle="tab" data-bs-target="#nav-hilite" type="button" role="tab" aria-controls="nav-hilite" aria-selected="true">HTML 변환기</button>
+                                <button class="nav-link" id="nav-html-inserter-tab" data-bs-toggle="tab" data-bs-target="#nav-html-inserter" type="button" role="tab" aria-controls="nav-html-inserter" aria-selected="false">HTML 삽입기</button>
+                                <button class="nav-link" id="nav-settings-tab" data-bs-toggle="tab" data-bs-target="#nav-settings" type="button" role="tab" aria-controls="nav-settings" aria-selected="false">설정</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-hilite" role="tabpanel" aria-labelledby="nav-hilite-tab">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="hilite-tab-textrea-html-floating" style="height: 100px"></textarea>
+                                    <label for="hilite-tab-textrea-html-floating" style="opacity: 70%">HTML로 변환할 소스코드 입력</label>
+                                </div>
+
+                                <div class="btn-group dropdown" style="margin-top: 10px">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle" id="hilite-tab-language-dropdown-menu-button" data-bs-toggle="dropdown" aria-expanded="false">언어 선택</button>
+                                    <ul class="dropdown-menu" id="hilite-tab-language-dropdown-menu-itmes">
+                                        <li><a class="dropdown-item" href="#" value="c">C</a></li>
+                                        <li><a class="dropdown-item" href="#" value="cpp">C++</a></li>
+										<li><a class="dropdown-item" href="#" value="csharp">C#</a></li>
+										<li><a class="dropdown-item" href="#" value="java">Java</a></li>
+										<li><a class="dropdown-item" href="#" value="js">JavaScript</a></li>
+										<li><a class="dropdown-item" href="#" value="html">HTML</a></li>
+										<li><a class="dropdown-item" href="#" value="php">PHP</a></li>
+										<li><a class="dropdown-item" href="#" value="python">Python</a></li>
+                                    </ul>
+
+									<button type="button" class="btn btn-secondary dropdown-toggle" id="hilite-tab-style-dropdown-menu-button" style="margin-left:5px" data-bs-toggle="dropdown" aria-expanded="false">스타일 선택</button>
+                                    <ul class="dropdown-menu" id="hilite-tab-style-dropdown-menu-itmes">
+                                        <li><a class="dropdown-item" href="#" value="default">Default</a></li>
+										<li><a class="dropdown-item" href="#" value="colorful">Colorful</a></li>
+										<li><a class="dropdown-item" href="#" value="autumn">Autumn</a></li>
+                                        <li><a class="dropdown-item" href="#" value="borland">Borland</a></li>
+										<li><a class="dropdown-item" href="#" value="bw">BW</a></li>
+										<li><a class="dropdown-item" href="#" value="emacs">Emacs</a></li>
+										<li><a class="dropdown-item" href="#" value="friendly">Friendly</a></li>
+										<li><a class="dropdown-item" href="#" value="manni">Manni</a></li>
+										<li><a class="dropdown-item" href="#" value="native">Native</a></li>
+										<li><a class="dropdown-item" href="#" value="tango">Tango</a></li>
+										<li><a class="dropdown-item" href="#" value="trac">Trac</a></li>
+										<li><a class="dropdown-item" href="#" value="vim">Vim</a></li>
+                                    </ul>
+
+                                    <div class="form-check" style="margin-left: 10px; margin-top: 5px">
+                                        <input class="form-check-input" type="checkbox" value="" id="hilite-tab-lineos-checkbox" />
+                                        <label class="form-check-label" for="hilite-tab-lineos-checkbox">줄번호</label>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="btn btn-outline-dark float-button" id="hilite-tab-button-convert-to-html">변환</button>
+                            </div>
+                            <div class="tab-pane fade" id="nav-html-inserter" role="tabpanel" aria-labelledby="nav-html-inserter-tab">
+								<textarea name="user-message" id="html-inserter-tab-textarea" class="form-control"  placeholder="삽입하고자 하는 HTML 소스입력" style="margin-top: 10px; max-width: 100%; height: 300px;"></textarea>
+
+								<div class="btn-group dropdown" style="margin-top: 10px">
+									<input class="form-check-input" type="checkbox" value="" id="html-inserter-tab-insert-first-checkbox" />
+									<label class="form-check-label" for="html-inserter-tab-insert-first-checkbox" style="margin-left: 5px;">맨 앞에 삽입</label>
+								</div>
+
+								<button type="button" class="btn btn-outline-dark float-button" id="html-inserter-tab-insert-button">삽입</button>
+							</div>
+                            <div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-settings-tab"></div>
+                        </div>
+
+                        <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		
+		<script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+		<script>
+			alert($('.tab-pane.fade.show.active').attr('id'));
+		</script>
+		
+    </body>
+</html>

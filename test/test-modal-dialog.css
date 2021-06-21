@@ -1,0 +1,12 @@
+#hilite-tab-textrea-html-floating {
+	margin-top: 10px;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.float-button {
+	float:right;
+	margin-top: 10px;
+	margin-bottom: 40px;
+	border-color: darkgray;
+}

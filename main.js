@@ -1,4 +1,0 @@
-// ==UserScript==
-// @grant
-// @version
-// ==/UserScript==

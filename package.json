@@ -1,0 +1,25 @@
+{
+  "name": "smart-editor-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yjd6808/_t_t_t_.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yjd6808/_t_t_t_/issues"
+  },
+  "homepage": "https://github.com/yjd6808/_t_t_t_#readme",
+  "dependencies": {
+    "@types/jquery": "^3.5.5"
+  }
+}

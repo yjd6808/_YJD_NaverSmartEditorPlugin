@@ -395,10 +395,29 @@ function onClickInsertHtmlButton()
 	}
 
 	var insertPositionElement = editorParagraphNodes.get(isInsertFirst ? 1 : -1);
-	var insertElement = document.createElement('div');
-	
-	insertElement.innerHTML = sourceCodeHTML;
+	var insertElement =	$('<iframe></iframe>')
+
+	var iFrameDoc = insertElement[0].contentDocument || insertElement[0].contentWindow.document;
+	iFrameDoc.write('<p>Some useful html</p>');
+	iFrameDoc.close();
+
+	alert(iFrameDoc);
+
+	// insertElement.setAttribute('id', "a-b-c-d-e-f");
+	// var tElem = insertElement.getElementsByTagName('body');
+
+	// tElem[0].innerHTML = sourceCodeHTML;
+
+
+	<iframe>
+		<head>
+		</head>
+		<body><p>ffff</p></body>
+		
+	</iframe>
 
 	insertPositionElement.innerHTML = "";
-	insertPositionElement.appendChild(insertElement);
+	insertPositionElement.appendChild(insertElement[0]);
+
+	alert('complete');
 }
